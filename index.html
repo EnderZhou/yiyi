@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>网易前端微专业第三期大作业</title>
+	<title>网易教育产品部</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<style>
 	.mainWidth{
-		width: 1206px;
+		width: 1205px;
 		margin: 0 auto;
 	}
 	/* tips */
@@ -38,7 +38,7 @@
 	.m-follow{
 		font:12px/89px "SimSun";
 	}
-	.m-follow-btn{
+	.m-follow .btn{
 		color: #ffffff;
 		background-color:#39a030; 
 	}
@@ -53,30 +53,81 @@
 		color: #39a030;
 	}
 	/* banner */
-	.m-banner{
+	.g-banner{
 		width: auto;
 		height: 460px;
 		background-color:#39a030;
 	}
 
-	/* courseInFo */
-	.m-courseInFo{
+	/* WebSiteShowRegion */
+	.m-websiteshow{
 		height: 175px;
 		margin: 60px auto;
 	}
-	.m-courseInFo h2{
+	.m-websiteshow .showzone{
+		margin-left: 60px;
+	}
+	.m-websiteshow .info{
+		margin-left: 100px;
+	}
+	.m-websiteshow h2{
 		font:22px/20px "微软雅黑";
 		color: #333333;
 	}
-	.m-courseInFo p{
+	.m-websiteshow p{
 		font:16px/24px "微软雅黑";
 		color: #666666;
 	}
-	.m-courseInFo a{
+	.m-websiteshow a{
 		color: #39a030;
 	}
-	.m-courseInFo a:hover{
+	.m-websiteshow a:hover{
 		color: #39a030;
+		text-decoration: underline;
+	}
+	/* PicShowRegion */
+	.m-picshow{
+		width: auto;
+		height: 220px;
+	}
+	/* main */
+	/* foot */
+	.g-ft{
+		width: auto;
+		height: 262px;
+		background-color: #2c3339;
+	}
+	/* 此处margin需要微调 */
+	.g-ftlf{
+		margin:80px;   
+	}
+	.g-ftlf .m-logo2{
+		color: #39a030;
+	}
+	.m-cprt{
+		font:12.5px/25px "微软雅黑";
+		color: #ffffff;
+	}
+	.g-ftrt{
+		margin-right: 110px;
+	}
+	/* 此处margin需要微调 */
+	.g-ftrt dl{
+		display: block;
+		float: left;
+		margin:80px 97px 0 0;
+	}
+	.g-ftrt dt{
+		font:12.5px/29.17px "微软雅黑";
+		color: #ffffff;
+	}
+	.g-ftrt dd a{
+		font:14.58px/29.17px "微软雅黑";
+		color: #ffffff;
+	}
+	.g-ftrt dd a:hover{
+		font:14.58px/29.17px "微软雅黑";
+		color: #ffffff;
 		text-decoration: underline;
 	}
 	</style>
@@ -90,11 +141,13 @@
 <!-- head -->
 <div class="g-head mainWidth">
 	<!-- LOGO -->
-	<h1 class="m-logo1 f-ib f-fl">EDU</h1><h1 class="m-logo2 f-ib f-fl">网易教育产品部</h1>
+	<div class="m-logo">
+		<h1 class="m-logo1 f-ib f-fl">EDU</h1><h1 class="m-logo2 f-ib f-fl">网易教育产品部</h1>
+	</div>
 	<!-- LOGO -->
 	<!-- follow -->
 	<div class="m-follow f-ib  f-fl">	
-		<span class="m-follow-btn">关注</span>
+		<span class="btn">关注</span>
 		<span>粉丝</span>
 	</div>
 	<!-- follow -->
@@ -109,33 +162,148 @@
 </div>
 <!-- head -->
 <!-- banner -->
-<div class="m-banner">
+<div class="g-banner">
+	<div class="m-banner-wrap f-mid">
+            <a href="#" class="banner-item active" style="display: block;"><img src="img/banner1.jpg" alt="" /></a>
+            <a href="#" class="banner-item" style="display: none;"><img src="img/banner2.jpg" alt="" /></a>
+            <a href="#" class="banner-item" style="display: none;"><img src="img/banner3.jpg" alt="" /></a>
+	</div>
+	<div class="m-banner-count">
+		
+	</div>
 	
 </div>
 <!-- banner -->
-<!-- courseInFo -->
-<div class="m-courseInFo mainWidth">
-	<div>
-		<img src="" alt="网易公开课">
-		<h2>网易公开课</h2>
-		<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
-		<a href="http://open.163.com/">了解更多 ></a>
+<!-- WebSiteShowRegion -->
+<div class="m-websiteshow mainWidth">
+	<table>
+		<tr>
+			<td>
+				<div class="showzone" 	>
+					<img class="" src="img/websitelogo1.png" alt="网易公开课">
+					<div class="info">
+						<h2>网易公开课</h2>
+						<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
+						<a href="http://open.163.com/">了解更多 ></a>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="showzone">
+					<img src="img/websitelogo2.png" alt="云课堂">
+					<div class="info">
+						<h2>云课堂</h2>
+						<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
+						<a href="http://study.163.com/">了解更多 ></a>
+					</div>
+				</div>
+			</td>
+			<td>
+				<div class="showzone">
+					<img src="img/websitelogo3.png" alt="中国大学MOOC">
+					<div class="info">
+						<h2>中国大学MOOC</h2>
+						<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
+						<a href="http://www.icourse163.org/">了解更多 ></a>
+					</div>
+				</div>
+				
+			</td>
+		</tr>
+	</table>
+</div>
+<!-- WebSiteShowRegion -->
+<!-- PicShowRegion 为了兼容考虑直接使用了table 另外图片拷贝的别人的有空需要重新切-->
+<div class="m-picshow">
+	<table class="f-mid">
+		<tr>
+			<td><img src="img/pic1.jpg" alt=""></td>
+			<td><img src="img/pic2.jpg" alt=""></td>
+			<td><img src="img/pic3.jpg" alt=""></td>
+			<td><img src="img/pic4.jpg" alt=""></td>
+			<td><img src="img/pic5.jpg" alt=""></td>
+		</tr>
+	</table>
+</div>
+<!-- PicShowRegion -->
+<!-- main -->
+<div class="g-mn mainWidth">
+	<div class="g-mnc">
+		<div class="tab J_tab">
+			<ul class="tab-menuWrapper">
+				<li class="J_tab-menu">产品设计</li>
+				<li class="J_tab-menu">编程语言</li>
+			</ul>
+			<div class="tab-contentWrapper">
+				<div class="J_tab-content">产品设计课程目录待补完</div>
+				<div class="J_tab-content" style="display:none">编程语言课程目录待补完</div>
+			</div>
+		</div>
 	</div>
-	<div>
-		<img src="" alt="云课堂">
-		<h2>云课堂</h2>
-		<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
-		<a href="http://study.163.com/">了解更多 ></a>
-	</div>
-	<div>
-		<img src="" alt="中国大学MOOC">
-		<h2>中国大学MOOC</h2>
-		<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
-		<a href="http://www.icourse163.org/">了解更多 ></a>
+	<div class="g-sd"></div>
+</div>
+<!-- main -->
+<!-- foot -->
+<div class="g-ft">
+	<div class="g-ftc mainWidth">
+		<div class="g-ftlf f-fl">
+			<!-- LOGO -->
+			<div class="m-logo">
+				<h1 class="m-logo1 f-b f-fl">EDU</h1><h1 class="m-logo2 f-b f-fl">网易教育产品部</h1>
+			</div>
+			<!-- LOGO -->
+			<!-- copyright -->
+			<p class="m-cprt">©2014 icourse163.org 浙ICP备08114786号-1</p>
+			<p class="m-cprt">icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+			<!-- copyright -->
+		</div >
+		<div class="g-ftrt f-fr">
+			<dl>
+				<dt>友情链接：</dt>
+				<dd><a href="http://open.163.com/">网易公开课</a></dd>
+				<dd><a href="http://study.163.com/">网易云课堂</a></dd>
+				<dd><a href="http://www.icourse163.org/">中国大学MOOC</a></dd>
+			</dl>
+			<dl>
+				<dt>我们：</dt>
+				<dd><a href="">关于</a></dd>
+				<dd><a href="">联系</a></dd>
+				<dd><a href="">关注</a></dd>
+			</dl>
+			<dl>
+				<dt>更多：</dt>
+				<dd><a href="">常见问题</a></dd>
+				<dd><a href="">意见反馈</a></dd>
+			</dl>
+		</div>
 	</div>
 </div>
-<!-- courseInFo -->
-<div></div>
-<div></div>
+<!-- foot -->
+<!-- 临时js部分 -->
+<script type="text/JavaScript">
+
+function settab (root) {
+	//获得tabMenu和tabContent的DOM节点，并保存在变量中
+	var tabMenus=root.getElementsByClassName("J_tab-menu");
+	var tabContents=root.getElementsByClassName('J_tab-content');
+
+	//遍历数组,让tabMenu监听click事件
+	for (var i = 0; i<tabMenus.length; i++) {
+		(function(_i){
+		tabMenus[_i].onclick=function  () {
+			for (var j = 0; j < tabContents.length;j++) {
+				tabContents[j].style.display="none";
+			};
+			tabContents[_i].style.display=" block";
+		}
+		})(i);
+	}
+}
+
+var tabs=document.getElementsByClassName(" J_tab");
+for (var i = 0; i < tabs.length; i++) {
+	settab(tabs[i]);
+};
+</script>
 </body>
 </html>
