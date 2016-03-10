@@ -1,0 +1,147 @@
+.mainWidth{
+		width: 1205px;
+		margin: 0 auto;
+	}
+	/* tips */
+	.m-tip-box{
+		width: auto;
+		background-color: #f3f3f3;	
+	}
+	.m-tips{
+		height: 38px;
+		font-size: 12px;
+		color: #333333;
+		line-height: 38px;
+	}
+	.m-tips-more{
+		color:#21a557;
+	}
+	/* head */
+	.g-head{
+		height: 89px;
+	}
+	.m-logo1{
+		font:bolder 28px/89px "Gill Sans MT";
+		color: #39a030;
+	}
+	.m-logo2{
+		font:22px/89px "Hiragino Sans GB";
+		color: #333333;
+	}
+	/* follow */
+	.m-follow{
+		font:12px/89px "SimSun";
+	}
+	.m-follow .btn{
+		color: #ffffff;
+		background-color:#39a030; 
+	}
+	/* head-nav */
+	.m-head-nav{
+		font:16px/89px  "Hiragino Sans GB";
+	}
+	.m-head-nav a{
+		color: #666666;
+	}
+	.m-head-nav a:hover{
+		color: #39a030;
+	}
+	/* banner */
+	.g-banner{
+		width: auto;
+		height: 460px;
+		background-color:#39a030;
+	}
+
+	/* WebSiteShowRegion */
+	.m-websiteshow{
+		height: 175px;
+		margin: 60px auto;
+	}
+	.m-websiteshow .showzone{
+		margin-left: 60px;
+	}
+	.m-websiteshow .showzone img{
+		margin-top: 6px;
+	}
+	.m-websiteshow .info{
+		margin-left: 100px;
+	}
+	.m-websiteshow h2{
+		margin-bottom: 14px;
+		font:22px/20px "微软雅黑";
+		color: #333333;
+	}
+	.m-websiteshow p{
+		margin-bottom: 28px;
+		font:14px/24px "微软雅黑";
+		color: #666666;
+	}
+	.m-websiteshow a{
+		font:14px/24px "微软雅黑";
+		color: #39a030;
+	}
+	.m-websiteshow a:hover{
+		color: #39a030;
+		text-decoration: underline;
+	}
+	/* PicShowRegion */
+	.m-picshow{
+		width: auto;
+		height: 220px;
+	}
+	/* main */
+	.g-mn{
+		width: auto;
+		height: 1151px;
+		background-color: #f8f8f8;
+	}
+	.m-tab{
+		width: 960px;
+	}
+	/* foot */
+	.g-ft{
+		width: auto;
+		height: 262px;
+		background-color: #2c3339;
+	}
+	/* 此处margin需要微调 */
+	.g-ftlf{
+		margin: 95px 0 0 53px; 
+	}
+	.g-ftlf .m-logo{
+		margin-bottom: 22px;
+	}
+	.g-ftlf .m-logo2{
+		color: #39a030;
+		line-height: 20px;
+	}
+	.g-ftlf .m-logo1{
+		line-height: 20px;
+	}
+	.m-cprt{
+		font:12.5px/25px "微软雅黑";
+		color: #ffffff;
+	}
+	.g-ftrt{
+		margin-right: 110px;
+	}
+	/* 此处margin需要微调 */
+	.g-ftrt dl{
+		display: block;
+		float: left;
+		margin:80px 97px 0 0;
+	}
+	.g-ftrt dt{
+		font:12.5px/29.17px "微软雅黑";
+		color: #ffffff;
+	}
+	.g-ftrt dd a{
+		font:14.58px/29.17px "微软雅黑";
+		color: #ffffff;
+	}
+	.g-ftrt dd a:hover{
+		font:14.58px/29.17px "微软雅黑";
+		color: #ffffff;
+		text-decoration: underline;
+	}

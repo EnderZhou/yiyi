@@ -3,134 +3,7 @@
 <head>
 	<title>网易教育产品部</title>
 	<link rel="stylesheet" href="css/reset.css">
-	<style>
-	.mainWidth{
-		width: 1205px;
-		margin: 0 auto;
-	}
-	/* tips */
-	.m-tip-box{
-		width: auto;
-		background-color: #f3f3f3;	
-	}
-	.m-tips{
-		height: 38px;
-		font-size: 12px;
-		color: #333333;
-		line-height: 38px;
-	}
-	.m-tips-more{
-		color:#21a557;
-	}
-	/* head */
-	.g-head{
-		height: 89px;
-	}
-	.m-logo1{
-		font:bolder 28px/89px "Gill Sans MT";
-		color: #39a030;
-	}
-	.m-logo2{
-		font:22px/89px "Hiragino Sans GB";
-		color: #333333;
-	}
-	/* follow */
-	.m-follow{
-		font:12px/89px "SimSun";
-	}
-	.m-follow .btn{
-		color: #ffffff;
-		background-color:#39a030; 
-	}
-	/* head-nav */
-	.m-head-nav{
-		font:16px/89px  "Hiragino Sans GB";
-	}
-	.m-head-nav a{
-		color: #666666;
-	}
-	.m-head-nav a:hover{
-		color: #39a030;
-	}
-	/* banner */
-	.g-banner{
-		width: auto;
-		height: 460px;
-		background-color:#39a030;
-	}
-
-	/* WebSiteShowRegion */
-	.m-websiteshow{
-		height: 175px;
-		margin: 60px auto;
-	}
-	.m-websiteshow .showzone{
-		margin-left: 60px;
-	}
-	.m-websiteshow .info{
-		margin-left: 100px;
-	}
-	.m-websiteshow h2{
-		font:22px/20px "微软雅黑";
-		color: #333333;
-	}
-	.m-websiteshow p{
-		font:16px/24px "微软雅黑";
-		color: #666666;
-	}
-	.m-websiteshow a{
-		color: #39a030;
-	}
-	.m-websiteshow a:hover{
-		color: #39a030;
-		text-decoration: underline;
-	}
-	/* PicShowRegion */
-	.m-picshow{
-		width: auto;
-		height: 220px;
-	}
-	/* main */
-	/* foot */
-	.g-ft{
-		width: auto;
-		height: 262px;
-		background-color: #2c3339;
-	}
-	/* 此处margin需要微调 */
-	.g-ftlf{
-		margin:80px;   
-	}
-	.g-ftlf .m-logo2{
-		color: #39a030;
-	}
-	.m-cprt{
-		font:12.5px/25px "微软雅黑";
-		color: #ffffff;
-	}
-	.g-ftrt{
-		margin-right: 110px;
-	}
-	/* 此处margin需要微调 */
-	.g-ftrt dl{
-		display: block;
-		float: left;
-		margin:80px 97px 0 0;
-	}
-	.g-ftrt dt{
-		font:12.5px/29.17px "微软雅黑";
-		color: #ffffff;
-	}
-	.g-ftrt dd a{
-		font:14.58px/29.17px "微软雅黑";
-		color: #ffffff;
-	}
-	.g-ftrt dd a:hover{
-		font:14.58px/29.17px "微软雅黑";
-		color: #ffffff;
-		text-decoration: underline;
-	}
-	</style>
+	<link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <!-- tips -->
@@ -180,7 +53,7 @@
 		<tr>
 			<td>
 				<div class="showzone" 	>
-					<img class="" src="img/websitelogo1.png" alt="网易公开课">
+					<img class="f-fl" src="img/websitelogo1.png" alt="网易公开课">
 					<div class="info">
 						<h2>网易公开课</h2>
 						<p>推出国内外名校公开课，涉及广泛的学科，名校老师认真讲解深度剖析，网易视频公开课频道搭建起强有力的网络视频教学平台。</p>
@@ -190,7 +63,7 @@
 			</td>
 			<td>
 				<div class="showzone">
-					<img src="img/websitelogo2.png" alt="云课堂">
+					<img class="f-fl" src="img/websitelogo2.png" alt="云课堂">
 					<div class="info">
 						<h2>云课堂</h2>
 						<p>网易旗下大型在线学习平台，该平台面向学习者提供海量免费、优质课程,创新的个性化学习体验，自由开放的交流互动环境。</p>
@@ -200,7 +73,7 @@
 			</td>
 			<td>
 				<div class="showzone">
-					<img src="img/websitelogo3.png" alt="中国大学MOOC">
+					<img class="f-fl" src="img/websitelogo3.png" alt="中国大学MOOC">
 					<div class="info">
 						<h2>中国大学MOOC</h2>
 						<p>是爱课程网携手云课堂打造的在线学习平台，每一个有提升愿望的人,都可以在这里学习中国最好的大学课程，学完还能获得认证证书。</p>
@@ -227,9 +100,10 @@
 </div>
 <!-- PicShowRegion -->
 <!-- main -->
-<div class="g-mn mainWidth">
-	<div class="g-mnc">
-		<div class="tab J_tab">
+<div class="g-mn">
+	<div class="g-mnc mainWidth">
+		<div class="m-tab">
+			<div class="tab J_tab">
 			<ul class="tab-menuWrapper">
 				<li class="J_tab-menu">产品设计</li>
 				<li class="J_tab-menu">编程语言</li>
@@ -239,8 +113,9 @@
 				<div class="J_tab-content" style="display:none">编程语言课程目录待补完</div>
 			</div>
 		</div>
+		</div>
+		<div class="g-sd"></div>
 	</div>
-	<div class="g-sd"></div>
 </div>
 <!-- main -->
 <!-- foot -->
@@ -248,13 +123,12 @@
 	<div class="g-ftc mainWidth">
 		<div class="g-ftlf f-fl">
 			<!-- LOGO -->
-			<div class="m-logo">
-				<h1 class="m-logo1 f-b f-fl">EDU</h1><h1 class="m-logo2 f-b f-fl">网易教育产品部</h1>
+			<div class="m-logo f-cb">
+				<h1 class="m-logo1 f-fl">EDU</h1><h1 class="m-logo2 f-fl">网易教育产品部</h1>
 			</div>
 			<!-- LOGO -->
 			<!-- copyright -->
-			<p class="m-cprt">©2014 icourse163.org 浙ICP备08114786号-1</p>
-			<p class="m-cprt">icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
+			<p class="m-cprt">©2014 icourse163.org 浙ICP备08114786号-1</br>icourses.cn 京ICP备12020869号-2 京公网安备110102000459-2</p>
 			<!-- copyright -->
 		</div >
 		<div class="g-ftrt f-fr">

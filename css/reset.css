@@ -20,7 +20,8 @@ body,textarea,input,button,select,keygen,legend{font:12px/1.14 "微软雅黑",ar
 body{background:#fff;}
 a,a:hover{color:#333;}
 /*  功能 CSS 待补完  */
-.f-cb{clear: both;}
+.f-cb{zoom:1;}
+.f-cb:after{content: '.';display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
 .f-fl{float: left;}
 .f-fr{float: right;}
 .f-ib{display: inline-block;}
