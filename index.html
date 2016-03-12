@@ -27,7 +27,7 @@
 	<!-- head nav -->
 	<div class="m-head-nav f-ib f-fr">
 		<a href="http://open.163.com/">网易公开课</a>
-		<a class="" href="http://study.163.com/">云课堂</a>
+		<a href="http://study.163.com/">云课堂</a>
 		<a href="http://www.icourse163.org/">中国大学MOOC</a>
 		<a href="">?</a>
 	</div>
@@ -35,18 +35,15 @@
 </div>
 <!-- head -->
 <!-- banner -->
-<div class="g-banner">
-	<div class="m-banner-wrap f-mid">
-            <a href="#" class="banner-item active" style="display: block;"><img src="img/banner1.jpg" alt="" /></a>
-            <a href="#" class="banner-item" style="display: none;"><img src="img/banner2.jpg" alt="" /></a>
-            <a href="#" class="banner-item" style="display: none;"><img src="img/banner3.jpg" alt="" /></a>
-	</div>
-	<div class="m-banner-count">
-		
-	</div>
-	
+<div class="m-slide">
+    <ol>
+        <li class="z-crt"><a href="http://open.163.com/"><img src="img/banner1.jpg" alt=""/></a></li>
+        <li><a href="http://study.163.com/"><img src="img/banner2.jpg" alt=""/></a></li>
+        <li><a href="http://www.icourse163.org/"><img src="img/banner3.jpg" alt=""/></a></li>
+    </ol>
+    <span class="u-pointer"><i class="first z-crt"></i><i></i><i></i></span>
 </div>
-<!-- banner -->
+<!-- banners -->
 <!-- WebSiteShowRegion -->
 <div class="m-websiteshow mainWidth">
 	<table>
@@ -86,7 +83,7 @@
 	</table>
 </div>
 <!-- WebSiteShowRegion -->
-<!-- PicShowRegion 为了兼容考虑直接使用了table 另外图片拷贝的别人的有空需要重新切-->
+<!-- PicShowRegion 为了兼容考虑直接使用了table-->
 <div class="m-picshow">
 	<table class="f-mid">
 		<tr>
@@ -153,7 +150,59 @@
 	</div>
 </div>
 <!-- foot -->
-<!-- 临时js部分 -->
+<!-- banner JS -->
+<script type="text/javascript">
+(function(_slides){
+    each(_slides,function(_slide,i){
+        var _ctrls = _slide.getElementsByTagName('i');
+        var _lists = _slide.getElementsByTagName('li');
+        each(_ctrls,function(_ctrl,i){
+            _ctrl.onclick=function(){
+                each(_lists,function(_list,i){
+                    delClass(_list,"z-crt");
+                });
+                each(_ctrls,function(_ctrl,i){
+                    delClass(_ctrl,"z-crt");
+                });
+                addClass(_lists[i],"z-crt");
+                addClass(_ctrls[i],"z-crt");
+            }
+        });
+    });
+
+	function hasClass(_object,_clsname){
+	    var _clsname = _clsname.replace(".","");
+	    var _sCls = " "+(_object.className)+" ";
+	    return (_sCls.indexOf(" "+_clsname+" ") != -1) ? true : false;
+	}
+	function toClass(_str){
+	    var _str = _str.toString();
+	    _str = _str.replace(/(^\s*)|(\s*$)/g,"");
+	    _str = _str.replace(/\s{2,}/g," ");
+	    return _str;
+	}
+	function addClass(_object,_clsname){
+	    var _clsname = _clsname.replace(".","");
+	    if(!hasClass(_object,_clsname)){
+	        _object.className = toClass(_object.className+(" "+_clsname));
+	    }
+	}
+	function delClass(_object,_clsname){
+	    var _clsname = _clsname.replace(".","");
+	    if(hasClass(_object,_clsname)){
+	        _object.className = toClass(_object.className.replace(new RegExp("(?:^|\\s)"+_clsname+"(?=\\s|$)","g")," "));
+	    }
+	}
+	function each(_objects,_fn){
+	    for(var i=0,len=_objects.length;i<len;i++){
+	        _fn(_objects[i],i);
+	    }
+	}
+})(document.getElementsByTagName('div'));
+
+</script>
+<!-- banner JS -->	
+<!-- main临时js部分 -->
 <script type="text/JavaScript">
 
 function settab (root) {
