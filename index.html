@@ -106,7 +106,7 @@
 				<li class="J_tab-menu">编程语言</li>
 			</ul>
 			<div class="tab-contentWrapper">
-				<div class="J_tab-content">产品设计课程目录待补完</div>
+				<div id ="test" class="J_tab-content">产品设计课程目录待补完</div>
 				<div class="J_tab-content" style="display:none">编程语言课程目录待补完</div>
 			</div>
 		</div>
@@ -150,83 +150,6 @@
 	</div>
 </div>
 <!-- foot -->
-<!-- banner JS -->
-<script type="text/javascript">
-(function(_slides){
-    each(_slides,function(_slide,i){
-        var _ctrls = _slide.getElementsByTagName('i');
-        var _lists = _slide.getElementsByTagName('li');
-        each(_ctrls,function(_ctrl,i){
-            _ctrl.onclick=function(){
-                each(_lists,function(_list,i){
-                    delClass(_list,"z-crt");
-                });
-                each(_ctrls,function(_ctrl,i){
-                    delClass(_ctrl,"z-crt");
-                });
-                addClass(_lists[i],"z-crt");
-                addClass(_ctrls[i],"z-crt");
-            }
-        });
-    });
-
-	function hasClass(_object,_clsname){
-	    var _clsname = _clsname.replace(".","");
-	    var _sCls = " "+(_object.className)+" ";
-	    return (_sCls.indexOf(" "+_clsname+" ") != -1) ? true : false;
-	}
-	function toClass(_str){
-	    var _str = _str.toString();
-	    _str = _str.replace(/(^\s*)|(\s*$)/g,"");
-	    _str = _str.replace(/\s{2,}/g," ");
-	    return _str;
-	}
-	function addClass(_object,_clsname){
-	    var _clsname = _clsname.replace(".","");
-	    if(!hasClass(_object,_clsname)){
-	        _object.className = toClass(_object.className+(" "+_clsname));
-	    }
-	}
-	function delClass(_object,_clsname){
-	    var _clsname = _clsname.replace(".","");
-	    if(hasClass(_object,_clsname)){
-	        _object.className = toClass(_object.className.replace(new RegExp("(?:^|\\s)"+_clsname+"(?=\\s|$)","g")," "));
-	    }
-	}
-	function each(_objects,_fn){
-	    for(var i=0,len=_objects.length;i<len;i++){
-	        _fn(_objects[i],i);
-	    }
-	}
-})(document.getElementsByTagName('div'));
-
-</script>
-<!-- banner JS -->	
-<!-- main临时js部分 -->
-<script type="text/JavaScript">
-
-function settab (root) {
-	//获得tabMenu和tabContent的DOM节点，并保存在变量中
-	var tabMenus=root.getElementsByClassName("J_tab-menu");
-	var tabContents=root.getElementsByClassName('J_tab-content');
-
-	//遍历数组,让tabMenu监听click事件
-	for (var i = 0; i<tabMenus.length; i++) {
-		(function(_i){
-		tabMenus[_i].onclick=function  () {
-			for (var j = 0; j < tabContents.length;j++) {
-				tabContents[j].style.display="none";
-			};
-			tabContents[_i].style.display=" block";
-		}
-		})(i);
-	}
-}
-
-var tabs=document.getElementsByClassName(" J_tab");
-for (var i = 0; i < tabs.length; i++) {
-	settab(tabs[i]);
-};
-</script>
+<script src="js/index.js"></script>
 </body>
 </html>
