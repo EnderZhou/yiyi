@@ -28,23 +28,16 @@ a,a:hover{color:#333;}
 .f-dn{display: none;}
 .f-b{display: block;}
 .f-i{display: inline;}
-.f-mid{	left: 50%;
-	  	position: absolute;
+.f-mid{	position: absolute;
+        left: 50%;
 	 	-webkit-transform:translate(-50%);
 	 	-moz-transform:translate(-50%);
 	 	-o-transform:translate(-50%);
 	 	transform:translate(-50%);}
 
 /* == clearfix == */
-.clearfix:after {
-    visibility: hidden;
-    display: block;
-    font-size: 0;
-    content: " ";
-    clear: both;
-    height: 0;
-}
-.clearfix { display: inline-table; }
+.clearfix { zoom:1; }
+.clearfix:after { content:''; display:block; visibility:hidden; height:0; clear:both; }
 /* Hides from IE-mac \*/
 * html .clearfix { height: 1%; }
 .clearfix { display: block; }

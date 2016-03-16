@@ -98,20 +98,78 @@
 <!-- PicShowRegion -->
 <!-- main -->
 <div class="g-mn">
-	<div class="g-mnc mainWidth">
-		<div class="m-tab">
-			<div class="tab J_tab">
-			<ul class="tab-menuWrapper">
-				<li class="J_tab-menu">产品设计</li>
-				<li class="J_tab-menu">编程语言</li>
+		<div class="m-course-side">
+            <div class="sideBox">
+                <h2 class="sideBox-title">机构介绍</h2>
+                <div class="sideBox-container">
+                    <div class="infoVideo">
+                        <p>观看下面的视频来了解吧：</p>
+                        <a href="javascript:;" id="video_btn"><img src="img/video.jpg" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+            <div class="sideBox">
+                <h2 class="sideBox-title">最热排行</h2>
+                <div class="sideBox-container">
+                    <div class="hotList-wrap">
+                        <ul class="hotList">
+                            <div id="hotList-item-tpl">
+                                <li class="hotList-item">
+                                    <img class="hotList-img" src="{{imgSrc}}" alt="" />
+                                    <div class="hotList-r">
+                                        <h3 class="hotList-title"><a href="#">{{title}}</a></h3>
+                                        <span class="m-course-num">{{num}}</span>
+                                    </div>
+                                </li>
+                            </div>
+
+                            <!-- <li class="hotList-item">
+                                <img class="hotList-img" src="" alt="" />
+                                <div class="hotList-r">
+                                    <h3 class="hotList-title"><a href="#">舞曲解密音乐解密舞曲解密</a></h3>
+                                    <span class="course-num">21567</span>
+                                </div>
+                            </li>
+                            <li class="hotList-item">
+                                <img class="hotList-img" src="" alt="" />
+                                <div class="hotList-r">
+                                    <h3 class="hotList-title"><a href="#">舞曲解密音乐解密舞曲解密</a></h3>
+                                    <span class="course-num">21567</span>
+                                </div>
+                            </li>
+                            <li class="hotList-item">
+                                <img class="hotList-img" src="" alt="" />
+                                <div class="hotList-r">
+                                    <h3 class="hotList-title"><a href="#">舞曲解密音乐解密舞曲解密</a></h3>
+                                    <span class="course-num">21567</span>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+	<div class="g-mnc mainWidth clearfix ">
+		<div class="m-tab J_tab m-course-container">
+			<ul class="tab-menuWrapper m-course-tabs">
+				<li class="m-course-tabs-item active J_tab-menu">产品设计</li>
+				<li class="m-course-tabs-item J_tab-menu">编程语言</li>
 			</ul>
 			<div class="tab-contentWrapper">
-				<div id ="test" class="J_tab-content">产品设计课程目录待补完</div>
-				<div class="J_tab-content" style="display:none">编程语言课程目录待补完</div>
+				<div class ="tab111 J_tab-content">课程数据加载出错</div>
+				<div class="J_tab-content" style="display:none">课程数据加载出错</div>
+				<div class="m-course-pages">
+	                <a href="javascript:;" class="pages-prev">&lt;</a>
+	                <!-- <a href="javascript:;" class="pages-item">1</a>
+	                <a href="javascript:;" class="pages-item active">2</a>
+	                <a href="javascript:;" class="pages-item">3</a>
+	                <a href="javascript:;" class="pages-item">4</a>
+	                <a href="javascript:;" class="pages-item">5</a> -->
+	                <a href="javascript:;" class="pages-next">&gt;</a>
+            	</div>
 			</div>
 		</div>
-		</div>
-		<div class="g-sd"></div>
+
 	</div>
 </div>
 <!-- main -->

@@ -48,6 +48,7 @@
 	}
 })(document.getElementsByTagName('div'));
 
+
 <!-- banner JS -->	
 
 <!-- main  tabe部分 -->
@@ -67,13 +68,17 @@ function settab (root) {
 			tabContents[_i].style.display=" block";
 			if (_i==0){
 				formdata.type = 10;
-				getdata();
-				changeclass();
+				formdata.pageNo =1;
+				// addClass(tabMenus[0],active);
+				// delClass(tabMenus[1],active);
+				changedata(formdata,tabContents[_i]);
 			}
 			if (_i==1){
 				formdata.type = 20;
-				getdata();
-				changeclass();
+				formdata.pageNo =1;
+				// addClass(tabMenus[1],active);
+				// delClass(tabMenus[0],active);
+				changedata(formdata,tabContents[_i]);
 			}
 		}
 		})(i);
@@ -86,7 +91,6 @@ for (var i = 0; i < tabs.length; i++) {
 };
 
 <!-- 课程列表部分js -->
-
 	var formdata = {
 		psize : 20,
 		type : 10,
@@ -95,14 +99,15 @@ for (var i = 0; i < tabs.length; i++) {
 	var url = "http://study.163.com/webDev/couresByCategory.htm?";
 
 	// 获取课程列表
-	function getdata(){
-		var request = new XMLHttpRequest();
-		request.open("GET", url + serializ(formdata));
+	function changedata(a,elm){
+		request = new XMLHttpRequest();
+		request.open("GET", url + serializ(a));
 		request.send(null);
 		request.onreadystatechange = function() {
 			if (request.readyState===4) {
 				if (request.status===200) { 
-					 data = JSON.parse(request.responseText);;
+					 data = JSON.parse(request.responseText);
+					 changeclass(elm);
 				} else {
 					alert("发生错误：" + request.status);
 				}
@@ -123,30 +128,31 @@ for (var i = 0; i < tabs.length; i++) {
 		}
 		return pairs.join('&');
 	}
-	// var data = getdata(url);
-	getdata();
-		//修改课程列表
-	function changeclass () {
-		 var html ='<ul class="course-list clearfix">';
-		for (var i=0;i<data.list.length;i++){
-			html += '<div id="course-item-tpl">'
-			html += '<li class="course-item">'
-			html += '<a href="javascript:;" class="course-item-default">'
-			html += '<img class="course-img" src="'+data.list[i].bigPhotoUrl+'" alt="">'
-			html += '<h3 class="course-title">'+data.list[i].name+'</h3>'
-			html += '<span class="course-tearcher">'+data.list[i].provider+'</span>'
-			html += '<span class="course-num-border">'+data.list[i].learnerCount+'</span>'
-			html += '<span class="course-price">'+(data.list[i].price?data.list[i].price:'免费')+'</span></a>';
 
-			html += '<div class="course-item-details">'
-			html += '<img class="course-img" src="'+data.list[i].bigPhotoUrl+'" alt="">'
-			html += '<div class="course-item-l">'
-			html += '<h3 class="course-title"><a href="#">'+data.list[i].name+'</a></h3>'
-			html += '<span class="course-num">'+data.list[i].learnerCount+'在学</span>'
-			html += '<span class="course-publisher">发布者：<a href="#">'+data.list[i].provider+'</a></span>'
-			html += '<span class="course-class">分类：<a href="#">'+data.list[i].categoryName+'/a></span></div>'
-			html += '<p class="course-text">'+data.list[i].description+'</p></div>';
+		//修改课程列表
+	function changeclass (elm) {
+		 var html ='<ul class="m-course-list clearfix">';
+		for (var i=0;i<data.list.length;i++){
+			html += '<div id="m-course-item-tpl">'
+			html += '<li class="m-course-item">'
+			html += '<a href="javascript:;" class="m-course-item-default">'
+			html += '<img class="m-course-img" src="'+data.list[i].bigPhotoUrl+'" alt="">'
+			html += '<h3 class="m-course-title">'+data.list[i].name+'</h3>'
+			html += '<span class="m-course-tearcher">'+data.list[i].provider+'</span>'
+			html += '<span class="m-course-num-border">'+data.list[i].learnerCount+'</span>'
+			html += '<span class="m-course-price">'+(data.list[i].price?data.list[i].price:'免费')+'</span></a>';
+
+			html += '<div class="m-course-item-details">'
+			html += '<img class="m-course-img" src="'+data.list[i].bigPhotoUrl+'" alt="">'
+			html += '<div class="m-course-item-l">'
+			html += '<h3 class="m-course-title"><a href="#">'+data.list[i].name+'</a></h3>'
+			html += '<span class="m-course-num">'+data.list[i].learnerCount+'在学</span>'
+			html += '<span class="m-course-publisher">发布者：<a href="#">'+data.list[i].provider+'</a></span>'
+			html += '<span class="m-course-class">分类：<a href="#">'+data.list[i].categoryName+'/a></span></div>'
+			html += '<p class="m-course-text">'+data.list[i].description+'</p></div>';
 		}
 		html +='</li></div>';
-		document.getElementById('test').innerHTML = html;
+		elm.innerHTML = html;
 	}
+	var tab1 = document.getElementsByClassName("tab111");
+	changedata(formdata,tab1[0]);
