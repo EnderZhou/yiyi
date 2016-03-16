@@ -260,3 +260,30 @@
 		color: #ffffff;
 		text-decoration: underline;
 	}
+
+	/*----------*\
+--- mask
+\*----------*/
+.mask { position: fixed; left: 0; top: 0; z-index: 10; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); }
+
+.popup { position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%); background-color: #fff; }
+
+.popup-title { padding: 28px 0 22px 30px; font-size: 18px; color: #444; }
+
+.popup-title-video { padding-left: 28px; }
+
+.popup-title-signinBox { padding-left: 40px; }
+
+.popup-close { position: absolute; right: 12px; top: 12px; width: 10px; height: 10px; background: url(../images/icon.png) no-repeat left -140px; cursor: pointer; }
+
+.video { width: 890px; padding: 0 30px 40px; }
+
+.signinBox { padding: 0 40px 40px; }
+
+.signinBox-input { display: block; width: 272px; height: 43px; border: 1px solid #dfdfdf; padding: 0 10px; box-shadow: inset 1px 1px 4px #f1f1f1; font-size: 16px; color: #ccc; line-height: 43px; }
+
+.signinBox-input-tips { height: 24px; line-height: 24px; color: #666; padding: 0 6px; }
+
+.signinBox-submit { width: 293px; height: 46px; margin-top: 15px; border: 0; font-size: 16px; color: #fff; box-shadow: 2px 2px 4px #d5e3da; background: -webkit-linear-gradient(top, #25ac49, #138e2d); background: -moz-linear-gradient(top, #25ac49, #138e2d); background: -ms-linear-gradient(top, #25ac49, #138e2d); background: -o-linear-gradient(top, #25ac49, #138e2d); background: linear-gradient(top, #25ac49, #138e2d); }
+
+.popup-signinBox, .popup-video, .mask { display: none; }
